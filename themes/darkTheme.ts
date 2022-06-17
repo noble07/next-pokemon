@@ -5,4 +5,4 @@ export const darkTheme = createTheme({
   theme: {
     colors: {}, // override dark theme colors
   }
-});
+})
