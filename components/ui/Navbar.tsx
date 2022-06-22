@@ -1,7 +1,7 @@
 import { Text, useTheme } from "@nextui-org/react"
 import Image from "next/image"
 
-export const Navbar = () => {
+const Navbar = () => {
 
   const { theme } = useTheme()
 
@@ -32,3 +32,5 @@ export const Navbar = () => {
     </div>
   )
 }
+
+export default Navbar

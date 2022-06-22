@@ -1,0 +1,1 @@
+import {default as PokemonCard} from './PokemonCard'
