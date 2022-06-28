@@ -6,7 +6,10 @@ interface LayoutProps {
   children: React.ReactNode
 }
 
+const origin = typeof window === 'undefined' ? '' : window.location.origin
+
 export const Layout = ({ title = 'PokemonApp', children }: LayoutProps) => {
+
   return (
     <>
       <Head>
@@ -14,6 +17,10 @@ export const Layout = ({ title = 'PokemonApp', children }: LayoutProps) => {
         <meta name="author" content="Juan Camilo M." />
         <meta name="description" content={`Información sobre el pokémon ${title}`} />
         <meta name="keywords" content={`${title}, pokémon, pokédex`} />
+
+        <meta property="og:title" content={`Información sobre ${title}`} />
+        <meta property="og:description" content={`Esta es la pagina sobre ${title}`} />
+        <meta property="og:image" content={`${origin}/img/banner.png`} />
       </Head>
 
       <Navbar />
